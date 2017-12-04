@@ -41,7 +41,6 @@ print('mnist.train.num_examples : ' , mnist.train.num_examples)
 
 for epoch in range(training_epoch):
     total_cost = 0
-
     for i in range(total_batch):
         batch_xs, batch_ys = mnist.train.next_batch(batch_size)
         _, cost_val = sess.run([optimizer, cost], feed_dict={X: batch_xs})
